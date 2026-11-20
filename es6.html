@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES 6</title>
+</head>
+<body>
+
+<!--Ecma Script 6-->
+<script>
+    var x = 100
+    let z = 10
+    const months = 12
+    const PI = 22 / 7
+
+    //arrow functions
+    function add(a, b) {
+        return a + b
+    }
+
+    const arrowAdd = (a, b, c) => a + b + c
+
+    console.log(arrowAdd(1, 2, 3))
+    //Template literals
+    let age = 88
+    let name = "Hilda"
+    let s = `My name is ${name} and I am ${age} yo`
+    let ss = "My name is " + name + " And I am " + age + " you"
+
+    // unpack data //destructure
+    let mpesa = {
+        phone: "0723456789",
+        code: "XYZ001",
+        date: "18/09/2026",
+        amount: 200
+    }
+
+    let {amount, date, phone} = mpesa
+    console.log(amount, date, phone)
+</script>
+
+<script src="js/es6.js"></script>
+
+</body>
+</html>

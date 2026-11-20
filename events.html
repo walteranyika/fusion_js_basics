@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events in JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-danger">Click me</button>
+    <p id="myText"></p>
+    <input type="number" class="form-control" id="myInput" placeholder="Enter a number">
+</div>
+
+<script>
+    //document
+    const btnOne = document.querySelector("button")
+    const p1 = document.querySelector("#myText") //.myClass
+    const myInput = document.querySelector("#myInput")
+    const title = document.querySelector('title')
+
+    btnOne.addEventListener('click', () => {
+        p1.textContent = "Button was clicked"
+        p1.classList.add("text-danger", "text-center")
+    })
+
+    myInput.addEventListener('keyup', (e)=>{
+        console.log('Typing', e.target.value)
+        let res = e.target.value ** 2
+        p1.textContent= res+""
+        title.textContent = "Typing " + e.target.value // `Typing ${e.target.value}`
+    })
+
+
+</script>
+</body>
+</html>

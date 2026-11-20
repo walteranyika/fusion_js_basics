@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If statements</title>
+</head>
+<body>
+
+<script>
+    let weight = prompt("Enter weight")
+    let height = prompt("Enter height")
+
+    let isConfirmed = confirm(`Are you sure your weight is ${weight} kgs and height is ${height}m`)
+
+    if (!isConfirmed){
+       //TODO stop executing JS
+    }
+
+    let bmi = weight / height ** 2
+
+    if (bmi < 18.5) {
+        alert('Malnourished')
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        alert("Normal")
+    } else {
+        alert("Overweight")
+    }
+    //Ctrl Alt L
+
+    let result = 12 > 11 ? "Greater" : "Less"
+
+    let color = isConfirmed ? "Green" : "Red"
+
+
+</script>
+
+</body>
+</html>

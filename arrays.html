@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+
+<script>
+    let scores = [56, 23, 78, 79, 90, 34, 56, 55, 54]
+    let cars = [
+        {make: "Toyota", cost: 3_500_000},
+        {make: "Honda", cost: 5_000_000},
+        {make: "Audi", cost: 7_000_000},
+    ]
+
+    let students = ["Kim", "Jack", "Halima", "Musa", "Chris"]
+
+    cars.push({make: "Mercedes", cost: 3_000_000})
+
+    /*console.log(cars)
+    console.log(cars[1].cost)
+    students.forEach((s) => console.log(s))
+    students.forEach((s) => {
+        console.log(s.toUpperCase())
+        console.log(s.length)
+    })*/
+
+    let above_65 = scores.filter((score) => score > 65)
+    //console.log(above_65)
+
+    let res = cars.find(c => c.make.includes('di'))
+    //console.log(res)
+
+    let new_scores = scores.map(s => s + 2)
+    console.log(new_scores)
+
+    function increment(x) {
+        return x + 5
+    }
+
+    console.log(scores.map(increment).filter(s => s < 60))
+
+    scores.map(increment).filter(s => s < 60).forEach(s=>console.log(s))
+
+</script>
+</body>
+</html>
